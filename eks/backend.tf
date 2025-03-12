@@ -9,8 +9,8 @@ terraform {
   backend "s3" {
     bucket         = "dev-siva-tf-bucket"
     region         = "us-east-1"
-    key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
+    key            = "LockID"
+    dynamodb_table = "terraform-lock"
     encrypt        = true
   }
 }
